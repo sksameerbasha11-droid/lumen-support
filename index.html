@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumen Support — Help that speaks your language</title>
+<meta name="description" content="AI-first customer support that replies in your language, reads your screenshots, and hands off to a real person the moment it should.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">L</span>
+      <span class="brand-name">Lumen Support</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#languages">Languages</a>
+      <a href="#escalation">Escalation</a>
+    </nav>
+    <button class="btn btn-primary nav-cta" data-open-widget>Chat with us</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero-band">
+    <div class="hero-blob hero-blob-a" aria-hidden="true"></div>
+    <div class="hero-blob hero-blob-b" aria-hidden="true"></div>
+    <div class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">AI support, first line</p>
+      <h1>Support that answers in your language — and knows exactly when to hand off.</h1>
+      <p class="hero-sub">Most issues get resolved in the chat, in whatever language your customer opened with. The rest get a drafted ticket and a real handoff — by email, Telegram, and Razorpay — before your customer even asks twice.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary btn-lg" data-open-widget>Start a conversation</button>
+        <a class="btn btn-ghost-dark btn-lg" href="#how">See how it works</a>
+      </div>
+      <div class="hero-trust">
+        <span>Payments via Razorpay</span><span>·</span><span>11+ languages</span><span>·</span><span>AI first, human when it matters</span>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="preview-card">
+        <div class="preview-row preview-user">
+          <span class="preview-lang">हिन्दी</span>
+          <div class="preview-bubble">मेरा पेमेंट फेल हो गया, पैसे कट गए</div>
+        </div>
+        <div class="preview-row preview-ai">
+          <div class="preview-bubble">I can see the charge went through but the order didn't confirm — let me check that payment ID with Razorpay directly.</div>
+        </div>
+        <div class="preview-meter"><span></span></div>
+        <div class="preview-row preview-user">
+          <span class="preview-lang">Español</span>
+          <div class="preview-bubble">¿Cuánto tarda el reembolso?</div>
+        </div>
+        <div class="preview-row preview-ai">
+          <div class="preview-bubble">Normalmente 3–5 días hábiles. Te aviso apenas Razorpay lo confirme.</div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="languages" id="languages">
+    <p class="section-label">Replies natively in</p>
+    <div class="lang-strip">
+      <span>English</span><span>中文</span><span>हिन्दी</span><span>Español</span><span>Français</span>
+      <span>العربية</span><span>Português</span><span>日本語</span><span>한국어</span><span>Русский</span><span>Deutsch</span>
+      <span>+ auto-detects any language your customer types in</span>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <p class="section-label">How a conversation actually flows</p>
+    <h2>Four steps, most conversations stop at step two.</h2>
+    <div class="flow">
+      <div class="flow-step">
+        <span class="flow-num">01</span>
+        <h3>Describe it, or show it</h3>
+        <p>Type the issue in any language, or attach a screenshot. The assistant reads both — error codes, amounts, screen names included.</p>
+      </div>
+      <div class="flow-step">
+        <span class="flow-num">02</span>
+        <h3>Resolved in the chat</h3>
+        <p>Payment status checks, refund timelines, account questions — handled directly, with steps when there are steps to give.</p>
+      </div>
+      <div class="flow-step flow-step-escalate">
+        <span class="flow-num">03</span>
+        <h3>Ticket drafted</h3>
+        <p>When something genuinely needs a person — an override, a suspected fraud case, a stuck payment — a clean summary gets written automatically.</p>
+      </div>
+      <div class="flow-step flow-step-escalate" id="escalation">
+        <span class="flow-num">04</span>
+        <h3>Routed for real</h3>
+        <p>The ticket goes to your support inbox and Telegram ops channel. Payment-gateway issues also loop in Razorpay support directly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <h2>Try it — it's the same assistant running in the corner of this page.</h2>
+    <button class="btn btn-primary btn-lg" data-open-widget>Open the chat</button>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>Lumen Support</span>
+  <span class="foot-mute">Built with Claude · Payments via Razorpay</span>
+</footer>
+
+<script src="support-widget.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "lumen-support",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lumen Support — landing page + embedded multilingual AI chat widget, backed by Vercel serverless functions (Hugging Face for chat, Razorpay + email/Telegram for escalation).",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step needed — plain static site'",
+    "start": "vercel dev",
+    "deploy": "vercel --prod",
+    "lint": "echo 'No linter configured yet'"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}
