@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const { HF_TOKEN, HF_MODEL = 'Qwen/Qwen2.5-7B-Instruct' } = process.env;
+  const { HF_TOKEN, HF_MODEL = 'Qwen/Qwen2.5-7B-Instruct:hf-inference' } = process.env;
   if (!HF_TOKEN) {
     res.status(500).json({ error: 'Server is missing HF_TOKEN' });
     return;
@@ -47,7 +47,7 @@ module.exports = async (req, res) => {
 };
 
 async function callHuggingFace(model, token, messages, isRetry) {
-  const upstream = await fetch(`https://api-inference.huggingface.co/models/${model}/v1/chat/completions`, {
+  const upstream = await fetch('https://router.huggingface.co/v1/chat/completions', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
