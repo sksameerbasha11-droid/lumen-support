@@ -17,7 +17,8 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const { HF_TOKEN, HF_MODEL = 'Qwen/Qwen2.5-7B-Instruct:hf-inference' } = process.env;
+  const { HF_TOKEN } = process.env;
+  const HF_MODEL = process.env.HF_MODEL || 'Qwen/Qwen2.5-7B-Instruct:hf-inference';
   if (!HF_TOKEN) {
     res.status(500).json({ error: 'Server is missing HF_TOKEN' });
     return;
@@ -67,7 +68,8 @@ async function callHuggingFace(model, token, messages, isRetry) {
   }
 
   if (!upstream.ok) {
-    throw new Error(data?.error || `Hugging Face returned ${upstream.status}`);
+    const errMsg = typeof data?.error === 'string' ? data.error : JSON.stringify(data?.error || data);
+    throw new Error(errMsg || `Hugging Face returned ${upstream.status}`);
   }
 
   return data?.choices?.[0]?.message?.content?.trim() || '';
