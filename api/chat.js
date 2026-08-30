@@ -18,7 +18,7 @@ module.exports = async (req, res) => {
   }
 
   const { HF_TOKEN } = process.env;
-  const HF_MODEL = process.env.HF_MODEL || 'Qwen/Qwen2.5-7B-Instruct:hf-inference';
+  const HF_MODEL = process.env.HF_MODEL || 'Qwen/Qwen2.5-7B-Instruct:auto';
   if (!HF_TOKEN) {
     res.status(500).json({ error: 'Server is missing HF_TOKEN' });
     return;
